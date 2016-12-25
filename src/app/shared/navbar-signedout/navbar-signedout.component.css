@@ -1,0 +1,11 @@
+.navbar {
+    top: 0;
+    width: 100%;
+    background-color: lightgray;
+    height: 35px;
+}
+
+.right {
+    float: right;
+    margin: 5px
+}
