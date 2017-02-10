@@ -1,0 +1,71 @@
+<md-card class="card">
+  <h1 class="heading">Sign Up</h1>
+  <form class="example-form">
+
+     <p><strong>Gender</strong></p>
+    <md-radio-group>
+      <md-radio-button value="Male">Male</md-radio-button>
+      <md-radio-button value="Female">Female</md-radio-button>
+    </md-radio-group>
+
+    <p style="margin-bottom: 0;" class="head"><strong>Weight</strong></p>
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="Weight in lbs">
+    </md-input-container>
+
+    <p><strong>Do you smoke?</strong></p>
+    <md-radio-group>
+      <md-radio-button value="Yes">Yes</md-radio-button>
+      <md-radio-button value="No">No</md-radio-button>
+    </md-radio-group>
+
+    <br />
+     <p><strong>Basic Information</strong></p>
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="Email">
+    </md-input-container>
+
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="Password">
+    </md-input-container>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><md-input-container class="example-full-width">
+        <input md-input placeholder="First name">
+      </md-input-container></td>
+      <td><md-input-container class="example-full-width">
+        <input md-input placeholder="Last name">
+      </md-input-container></td>
+    </tr></table>
+
+    <!--Family history, ask for cancer, diabetes, height  -->
+    <!--drinking, weekly exercise, diet-->
+    <!--Marital status-->
+    <!--race ethnicity -->
+    <!--education-->
+
+    <br />
+    <p><strong>Location</strong></p>
+    <p>
+      <md-input-container class="example-full-width">
+        <textarea md-input placeholder="Address"></textarea>
+      </md-input-container>
+      <md-input-container class="example-full-width">
+        <textarea md-input placeholder="Address 2"></textarea>
+      </md-input-container>
+    </p>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><md-input-container class="example-full-width">
+        <input md-input placeholder="City">
+      </md-input-container></td>
+      <td><md-input-container class="example-full-width">
+        <input md-input placeholder="State">
+      </md-input-container></td>
+      <td><md-input-container class="example-full-width">
+        <input md-input #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+        <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+      </md-input-container></td>
+    </tr></table>
+  </form>
+</md-card>
