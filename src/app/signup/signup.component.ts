@@ -30,6 +30,10 @@ export class SignupComponent implements OnInit {
   public barChartData:any[] = [
     {data: [-5, 4, 3, -2, 1], label: 'Series A'}
   ];
+
+  public barChartColors:any[] = [
+    'white'
+  ]
  
   // events
   public chartClicked(e:any):void {

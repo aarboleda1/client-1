@@ -19,7 +19,8 @@
 }
 
 .age-section {
-    margin-top: 50px;
+    /*margin-top: 50px;*/
+    height: 45%;
 }
 
 .age-section h2 {
@@ -33,5 +34,5 @@
 }
 
 .graphs {
-
+    /*background-color: white;*/
 }
