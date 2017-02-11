@@ -1,11 +1,7 @@
-.navbar {
-    top: 0;
-    width: 100%;
-    background-color: lightgray;
-    height: 35px;
+.example-icon {
+  padding: 0 14px;
 }
 
-.right {
-    float: right;
-    margin: 5px;
+.example-spacer {
+  flex: 1 1 auto;
 }
