@@ -16,6 +16,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SignupFormComponent } from './signup/signup-form/signup-form.component';
 import { LabSearchComponent } from './lab-search/lab-search.component';
+import { SignupService } from './signup/signup.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,9 @@ import { LabSearchComponent } from './lab-search/lab-search.component';
       {path: 'lab-search', component: LabSearchComponent}
     ])
   ],
-  providers: [],
+  providers: [
+    SignupService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
