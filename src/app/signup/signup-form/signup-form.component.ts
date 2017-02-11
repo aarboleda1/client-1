@@ -7,6 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupFormComponent implements OnInit {
 
+  public familyHistory = {
+    cancer: false,
+    heart: false,
+    stroke: false,
+    dementia: false,
+    diabetes: false,
+    depression: false
+  }
+
+  logHistory() {
+    console.log(this.familyHistory)
+  }
+
+
   constructor() { }
 
   ngOnInit() {

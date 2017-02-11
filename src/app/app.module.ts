@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SignupFormComponent } from './signup/signup-form/signup-form.component';
+import { SignupService } from './signup/signup.service';
 
 @NgModule({
   declarations: [

@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
  
   public barChartData:any[] = [
     {data: [-5, 4, 3, -2, 1], label: 'Years gained / lost'}
-  ];
+  ]
  
   // events
   public chartClicked(e:any):void {
