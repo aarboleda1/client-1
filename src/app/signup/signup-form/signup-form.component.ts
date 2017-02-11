@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SignupService } from '../signup.service'
 
 @Component({
   selector: 'app-signup-form',
@@ -16,14 +17,35 @@ export class SignupFormComponent implements OnInit {
     depression: false
   }
 
-  logHistory() {
-    console.log(this.familyHistory)
+  public habits = {
+    gender: undefined,
+    smoker: undefined,
+    maritalStatus: undefined,
+    activity: undefined,
+    diet: undefined,
+    weight: undefined
   }
 
+  public user = {
+    email: undefined,
+    password: undefined,
+    address: undefined,
+    addressTwo: undefined,
+    city: undefined,
+    state: undefined,
+    zip: undefined
+  }
 
-  constructor() { }
+  constructor(public signupService: SignupService) { }
 
   ngOnInit() {
+  }
+
+  registerUser() {
+    this.signupService.registerUser(this.user, this.familyHistory, this.habits)
+      .subscribe(res => {
+        console.log('Signup has returned the response: ', res)
+      })
   }
 
 }

@@ -2,28 +2,28 @@
   <h1 class="heading">Sign Up</h1>
   <div class="example-form">
 
-    <md-radio-group class="radio-buttons">
+    <md-radio-group class="radio-buttons" [(ngModel)]="habits.gender">
       <p class="secondary-heading"><strong>Gender</strong></p>
       <md-radio-button value="Male">Male</md-radio-button>
       <md-radio-button value="Female">Female</md-radio-button>
     </md-radio-group>
 
     <br /><br />
-    <md-radio-group class="radio-buttons">
+    <md-radio-group class="radio-buttons" [(ngModel)]="habits.smoker">
       <p class="secondary-heading"><strong>Do you smoke?</strong></p>
       <md-radio-button value="Yes">Yes</md-radio-button>
       <md-radio-button value="No">No</md-radio-button>
     </md-radio-group>
 
     <br /><br />
-    <md-radio-group class="radio-buttons">
-      <p class="secondary-heading"><strong>Martial Status</strong></p>
+    <md-radio-group class="radio-buttons" [(ngModel)]="habits.maritalStatus">
+      <p class="secondary-heading"><strong>Marital Status</strong></p>
       <md-radio-button value="Yes">Married</md-radio-button>
       <md-radio-button value="No">Single</md-radio-button>
     </md-radio-group>
 
     <br /><br />
-    <md-radio-group class="radio-buttons">
+    <md-radio-group class="radio-buttons" [(ngModel)]="habits.activity">
       <p class="secondary-heading"><strong>How active are you?</strong></p>
       <md-radio-button value="very">Very</md-radio-button>
       <md-radio-button value="moderate">Moderate</md-radio-button>
@@ -32,7 +32,7 @@
     </md-radio-group>
 
     <br /><br />
-    <md-radio-group class="radio-buttons">
+    <md-radio-group class="radio-buttons" [(ngModel)]="habits.diet">
       <p class="secondary-heading"><strong>How are your eating habits?</strong></p>
       <md-radio-button value="very">Good</md-radio-button>
       <md-radio-button value="moderate">Average</md-radio-button>
@@ -41,7 +41,7 @@
 
     <p style="margin-bottom: 0;" class="head"><strong>Weight</strong></p>
     <md-input-container class="example-full-width">
-      <input md-input placeholder="Weight in lbs">
+      <input md-input placeholder="Weight in lbs" [(ngModel)]="habits.weight">
     </md-input-container>
 
     <p class="secondary-heading"><strong>Family History</strong></p>
@@ -57,19 +57,19 @@
     <br />
     <p><strong>Account Information</strong></p>
     <md-input-container class="example-full-width">
-      <input md-input placeholder="Email">
+      <input md-input placeholder="Email" [(ngModel)]="user.email">
     </md-input-container>
 
     <md-input-container class="example-full-width">
-      <input md-input placeholder="Password">
+      <input md-input placeholder="Password" [(ngModel)]="user.password">
     </md-input-container>
 
     <table class="example-full-width" cellspacing="0"><tr>
       <td><md-input-container class="example-full-width">
-        <input md-input placeholder="First name">
+        <input md-input placeholder="First name" [(ngModel)]="user.firstName">
       </md-input-container></td>
       <td><md-input-container class="example-full-width">
-        <input md-input placeholder="Last name">
+        <input md-input placeholder="Last name" [(ngModel)]="user.lastName">
       </md-input-container></td>
     </tr></table>
 
@@ -81,26 +81,26 @@
     <p><strong>Location</strong></p>
     <p>
       <md-input-container class="example-full-width">
-        <textarea md-input placeholder="Address"></textarea>
+        <textarea md-input placeholder="Address" [(ngModel)]="user.address"></textarea>
       </md-input-container>
       <md-input-container class="example-full-width">
-        <textarea md-input placeholder="Address 2"></textarea>
+        <textarea md-input placeholder="Address 2" [(ngModel)]="user.addressTwo"></textarea>
       </md-input-container>
     </p>
 
     <table class="example-full-width" cellspacing="0"><tr>
       <td><md-input-container class="example-full-width">
-        <input md-input placeholder="City">
+        <input md-input placeholder="City" [(ngModel)]="user.city">
       </md-input-container></td>
       <td><md-input-container class="example-full-width">
-        <input md-input placeholder="State">
+        <input md-input placeholder="State" [(ngModel)]="user.state">
       </md-input-container></td>
       <td><md-input-container class="example-full-width">
-        <input md-input #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+        <input md-input #postalCode maxlength="5" placeholder="Postal Code" value="94043" [(ngModel)]="user.zip">
         <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
       </md-input-container></td>
     </tr></table><br />
 
-    <button md-button md-raised style="background-color: mediumpurple; color: white;" (click)="this.logHistory()">Submit</button>
+    <button md-button md-raised style="background-color: mediumpurple; color: white;" (click)="this.registerUser()">Submit</button>
   </div>
 </md-card>

@@ -40,7 +40,9 @@ import { SignupService } from './signup/signup.service';
       {path: 'login', component: LoginComponent}
     ])
   ],
-  providers: [],
+  providers: [
+    SignupService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
