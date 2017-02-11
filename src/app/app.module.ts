@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SignupFormComponent } from './signup/signup-form/signup-form.component';
+import { LabSearchComponent } from './lab-search/lab-search.component';
 import { SignupService } from './signup/signup.service';
 
 @NgModule({
@@ -26,7 +27,8 @@ import { SignupService } from './signup/signup.service';
     HomeComponent,
     SignupComponent,
     LoginComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    LabSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { SignupService } from './signup/signup.service';
     RouterModule.forRoot([
       {path: '', component: LandingComponent},
       {path: 'signup', component: SignupComponent},
-      {path: 'login', component: LoginComponent}
+      {path: 'login', component: LoginComponent},
+      {path: 'lab-search', component: LabSearchComponent}
     ])
   ],
   providers: [
