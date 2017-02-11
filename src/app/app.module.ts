@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupFormComponent } from './signup/signup-form/signup-form.component';
 import { LabSearchComponent } from './lab-search/lab-search.component';
 import { SignupService } from './signup/signup.service';
+import { PricingComponent } from './pricing/pricing.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SignupService } from './signup/signup.service';
     SignupComponent,
     LoginComponent,
     SignupFormComponent,
-    LabSearchComponent
+    LabSearchComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { SignupService } from './signup/signup.service';
       {path: '', component: LandingComponent},
       {path: 'signup', component: SignupComponent},
       {path: 'login', component: LoginComponent},
-      {path: 'lab-search', component: LabSearchComponent}
+      {path: 'lab-search', component: LabSearchComponent},
+      {path: 'pricing', component: PricingComponent}
     ])
   ],
   providers: [

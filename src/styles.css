@@ -11,3 +11,9 @@ body {
 .loading-logo {
     margin-left: 30%;
 }
+
+.heading {
+    text-align: center;
+    font-size: 70px;
+    
+}
