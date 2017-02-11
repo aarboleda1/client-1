@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarSignedoutComponent } from 'NavbarSignedout';
+import { NavbarSignedoutComponent } from '../shared/navbar-signedout/navbar-signedout.component';
 
 @Component({
   selector: 'app-landing',
@@ -11,6 +11,7 @@ export class LandingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
