@@ -42,7 +42,11 @@ export class SignupFormComponent implements OnInit {
   }
 
   registerUser() {
-    this.signupService.registerUser(this.user, this.familyHistory, this.habits)
+    // console.log('user', this.user)
+    // console.log('habits', this.habits)
+    // console.log('familyHistory', this.familyHistory)
+    
+    this.signupService.registerUser(this.user)
       .subscribe(res => {
         console.log('Signup has returned the response: ', res)
       })

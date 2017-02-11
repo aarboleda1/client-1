@@ -8,14 +8,8 @@ export class SignupService {
 
   constructor(public http: Http) { }
 
-  registerUser(user, familyHistory, habits): Observable<any> {
-    let finalUser = {
-      user: user,
-      familyHistory: familyHistory,
-      habits: habits
-    }
-
-    return this.http.post('/api/user/signup', finalUser)
+  registerUser(user): Observable<any> {
+    return this.http.post('http://localhost:8000/api/user/signup', user)
       .map(res => {
         return res.json();
       })

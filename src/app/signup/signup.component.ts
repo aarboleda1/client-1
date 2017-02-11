@@ -12,8 +12,7 @@ export class SignupComponent implements OnInit {
     smoke: true,
     drink: 100,
     activity: 0,
-    weight: 300,
-
+    weight: 300
   }
 
   constructor() { }
