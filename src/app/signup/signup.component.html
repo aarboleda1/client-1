@@ -4,6 +4,17 @@
     <h2>Life Expectency: {{ expectency.age }}</h2>
   </div>
   <div class="graphs">
-    <!--tabs with graphs based on information-->
+    <div>
+      <div style="display: block">
+        <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
   </div>
 </div>

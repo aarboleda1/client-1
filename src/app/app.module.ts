@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { Routes, RouterModule } from '@angular/router';
 import 'hammerjs';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
@@ -31,6 +32,7 @@ import { SignupFormComponent } from './signup/signup-form/signup-form.component'
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
+    ChartsModule,
     RouterModule.forRoot([
       {path: '', component: LandingComponent},
       {path: 'signup', component: SignupComponent},

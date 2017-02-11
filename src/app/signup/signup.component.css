@@ -22,9 +22,9 @@
     margin-top: 50px;
 }
 
-.age-section h1 {
-    margin-left: 47%;
-    font-size: 70px;
+.age-section h2 {
+    text-align: center;
+    font-size: 3vw;
 }
 
 .age-section h3 {

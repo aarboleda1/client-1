@@ -3,3 +3,11 @@
 body {
     margin: 0;
 }
+
+.loading-logo-div {
+    width: 100%;
+}
+
+.loading-logo {
+    margin-left: 30%;
+}
