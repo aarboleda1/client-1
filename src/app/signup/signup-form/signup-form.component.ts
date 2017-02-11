@@ -8,45 +8,13 @@ import { SignupService } from '../signup.service'
 })
 export class SignupFormComponent implements OnInit {
 
-  public familyHistory = {
-    cancer: false,
-    heart: false,
-    stroke: false,
-    dementia: false,
-    diabetes: false,
-    depression: false
-  }
-
-  public habits = {
-    gender: undefined,
-    smoker: undefined,
-    maritalStatus: undefined,
-    activity: undefined,
-    diet: undefined,
-    weight: undefined
-  }
-
-  public user = {
-    email: undefined,
-    password: undefined,
-    address: undefined,
-    addressTwo: undefined,
-    city: undefined,
-    state: undefined,
-    zip: undefined
-  }
-
   constructor(public signupService: SignupService) { }
 
   ngOnInit() {
   }
 
   registerUser() {
-    // console.log('user', this.user)
-    // console.log('habits', this.habits)
-    // console.log('familyHistory', this.familyHistory)
-    
-    this.signupService.registerUser(this.user)
+    this.signupService.registerUser()
       .subscribe(res => {
         console.log('Signup has returned the response: ', res)
       })

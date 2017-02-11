@@ -2,101 +2,108 @@
   <h1 class="heading">Sign Up</h1>
   <div class="example-form">
 
-    <md-radio-group class="radio-buttons" [(ngModel)]="habits.gender">
+    <md-radio-group class="radio-buttons" [(ngModel)]="this.signupService.user.gender">
       <p class="secondary-heading"><strong>Gender</strong></p>
       <md-radio-button value="Male">Male</md-radio-button>
       <md-radio-button value="Female">Female</md-radio-button>
     </md-radio-group>
 
     <br /><br />
-    <md-radio-group class="radio-buttons" [(ngModel)]="habits.smoker">
-      <p class="secondary-heading"><strong>Do you smoke?</strong></p>
-      <md-radio-button value="Yes">Yes</md-radio-button>
-      <md-radio-button value="No">No</md-radio-button>
+    <md-radio-group class="radio-buttons" [(ngModel)]="signupService.user.smoker">
+      <p class="secondary-heading"><strong>How often do you smoke?</strong></p>
+      <md-radio-button value="-7">Daily</md-radio-button>
+      <md-radio-button value="-4">Weekly</md-radio-button>
+      <md-radio-button value="-2">Monthly</md-radio-button>
+      <md-radio-button value="5">Never</md-radio-button>
     </md-radio-group>
 
     <br /><br />
-    <md-radio-group class="radio-buttons" [(ngModel)]="habits.maritalStatus">
+    <md-radio-group class="radio-buttons" [(ngModel)]="signupService.user.drinker">
+      <p class="secondary-heading"><strong>How often do you drink alcoholic beverages?</strong></p>
+      <md-radio-button value="-4">Daily</md-radio-button>
+      <md-radio-button value="1">Weekly</md-radio-button>
+      <md-radio-button value="3">Monthly</md-radio-button>
+      <md-radio-button value="3">Never</md-radio-button>
+    </md-radio-group>
+
+    <br /><br />
+    <md-radio-group class="radio-buttons" [(ngModel)]="signupService.user.maritalStatus">
       <p class="secondary-heading"><strong>Marital Status</strong></p>
       <md-radio-button value="Yes">Married</md-radio-button>
       <md-radio-button value="No">Single</md-radio-button>
     </md-radio-group>
 
     <br /><br />
-    <md-radio-group class="radio-buttons" [(ngModel)]="habits.activity">
+    <md-radio-group class="radio-buttons" [(ngModel)]="signupService.user.activity">
       <p class="secondary-heading"><strong>How active are you?</strong></p>
-      <md-radio-button value="very">Very</md-radio-button>
-      <md-radio-button value="moderate">Moderate</md-radio-button>
-      <md-radio-button value="little">Little</md-radio-button>
-      <md-radio-button value="none">None</md-radio-button>
+      <md-radio-button value="5">Very</md-radio-button>
+      <md-radio-button value="3">Moderate</md-radio-button>
+      <md-radio-button value="-3">Little</md-radio-button>
+      <md-radio-button value="-5">None</md-radio-button>
     </md-radio-group>
 
     <br /><br />
-    <md-radio-group class="radio-buttons" [(ngModel)]="habits.diet">
+    <md-radio-group class="radio-buttons" [(ngModel)]="signupService.user.diet">
       <p class="secondary-heading"><strong>How are your eating habits?</strong></p>
-      <md-radio-button value="very">Good</md-radio-button>
-      <md-radio-button value="moderate">Average</md-radio-button>
-      <md-radio-button value="little">Poor</md-radio-button>
+      <md-radio-button value="5">Good</md-radio-button>
+      <md-radio-button value="0">Average</md-radio-button>
+      <md-radio-button value="-4">Poor</md-radio-button>
     </md-radio-group>
 
     <p style="margin-bottom: 0;" class="head"><strong>Weight</strong></p>
     <md-input-container class="example-full-width">
-      <input md-input placeholder="Weight in lbs" [(ngModel)]="habits.weight">
+      <input md-input placeholder="Weight in lbs" [(ngModel)]="signupService.user.weight">
     </md-input-container>
 
     <p class="secondary-heading"><strong>Family History</strong></p>
     <section class="example-section">
-      <md-checkbox class="example-margin" [(ngModel)]="familyHistory.cancer">Cancer</md-checkbox>
-      <md-checkbox class="example-margin" [(ngModel)]="familyHistory.diabetes">Diabetes</md-checkbox>
-      <md-checkbox class="example-margin" [(ngModel)]="familyHistory.heart">Heart Disease</md-checkbox>
-      <md-checkbox class="example-margin" [(ngModel)]="familyHistory.stroke">Stroke</md-checkbox>
-      <md-checkbox class="example-margin" [(ngModel)]="familyHistory.depression">Depression</md-checkbox>
-      <md-checkbox class="example-margin" [(ngModel)]="familyHistory.dementia">Alzheimer's disease/dementia</md-checkbox>
+      <md-checkbox class="example-margin" [(ngModel)]="signupService.user.cancer">Cancer</md-checkbox>
+      <md-checkbox class="example-margin" [(ngModel)]="signupService.user.diabetes">Diabetes</md-checkbox>
+      <md-checkbox class="example-margin" [(ngModel)]="signupService.user.heart">Heart Disease</md-checkbox>
+      <md-checkbox class="example-margin" [(ngModel)]="signupService.user.stroke">Stroke</md-checkbox>
+      <md-checkbox class="example-margin" [(ngModel)]="signupService.user.depression">Depression</md-checkbox>
+      <md-checkbox class="example-margin" [(ngModel)]="signupService.user.dementia">Alzheimer's disease/dementia</md-checkbox>
     </section>
 
     <br />
     <p><strong>Account Information</strong></p>
     <md-input-container class="example-full-width">
-      <input md-input placeholder="Email" [(ngModel)]="user.email">
+      <input md-input placeholder="Email" [(ngModel)]="signupService.user.email">
     </md-input-container>
 
     <md-input-container class="example-full-width">
-      <input md-input placeholder="Password" [(ngModel)]="user.password">
+      <input md-input placeholder="Password" [(ngModel)]="signupService.user.password">
     </md-input-container>
 
     <table class="example-full-width" cellspacing="0"><tr>
       <td><md-input-container class="example-full-width">
-        <input md-input placeholder="First name" [(ngModel)]="user.firstName">
+        <input md-input placeholder="First name" [(ngModel)]="signupService.user.firstName">
       </md-input-container></td>
       <td><md-input-container class="example-full-width">
-        <input md-input placeholder="Last name" [(ngModel)]="user.lastName">
+        <input md-input placeholder="Last name" [(ngModel)]="signupService.user.lastName">
       </md-input-container></td>
     </tr></table>
-
-    <!--drinking, weekly exercise, diet-->
-    <!--race ethnicity -->
-    <!--education-->
 
     <br />
     <p><strong>Location</strong></p>
     <p>
       <md-input-container class="example-full-width">
-        <textarea md-input placeholder="Address" [(ngModel)]="user.address"></textarea>
+        <textarea md-input placeholder="Address" [(ngModel)]="signupService.user.address"></textarea>
       </md-input-container>
       <md-input-container class="example-full-width">
-        <textarea md-input placeholder="Address 2" [(ngModel)]="user.addressTwo"></textarea>
+        <textarea md-input placeholder="Address 2" [(ngModel)]="signupService.user.addressTwo"></textarea>
       </md-input-container>
     </p>
 
     <table class="example-full-width" cellspacing="0"><tr>
       <td><md-input-container class="example-full-width">
-        <input md-input placeholder="City" [(ngModel)]="user.city">
+        <input md-input placeholder="City" [(ngModel)]="signupService.user.city">
       </md-input-container></td>
       <td><md-input-container class="example-full-width">
-        <input md-input placeholder="State" [(ngModel)]="user.state">
+        <input md-input placeholder="State" [(ngModel)]="signupService.user.state">
       </md-input-container></td>
       <td><md-input-container class="example-full-width">
-        <input md-input #postalCode maxlength="5" placeholder="Postal Code" value="94043" [(ngModel)]="user.zip">
+        <input md-input #postalCode maxlength="5" placeholder="Postal Code" value="94043" [(ngModel)]="signupService.user.zip">
         <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
       </md-input-container></td>
     </tr></table><br />
